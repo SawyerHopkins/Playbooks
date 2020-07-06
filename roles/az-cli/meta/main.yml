@@ -1,0 +1,15 @@
+dependencies:
+  - role: apt-install
+    vars:
+      packagesdep:
+        - lsb-release
+        - gnupg
+  - role: apt-register
+    vars:
+      key_url: https://packages.microsoft.com/keys/microsoft.asc
+      repo_statement: "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli {{ ansible_distribution_release }} main"
+      repo_list_name: azcli
+  - role: apt-install
+    vars:
+      packagesdep:
+        - azure-cli

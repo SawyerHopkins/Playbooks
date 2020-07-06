@@ -1,0 +1,6 @@
+---
+- hosts: all
+  roles:
+    - role: docker
+    - role: kubernetes
+    - role: open-vm-tools

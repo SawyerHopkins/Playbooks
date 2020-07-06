@@ -1,0 +1,12 @@
+dependencies:
+  - role: apt-register
+    vars:
+      key_url: https://download.docker.com/linux/debian/gpg
+      repo_statement: deb [arch=amd64] https://download.docker.com/linux/debian {{ ansible_distribution_release }} stable
+      repo_list_name: docker
+  - role: apt-install
+    vars:
+      packagesdep:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io

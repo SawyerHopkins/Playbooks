@@ -1,0 +1,12 @@
+- name: Update APT Package Index
+  become: yes
+  apt:
+    name: "*"
+    state: latest
+    update_cache: yes
+    force_apt_get: yes
+- name: Install packages with APT
+  become: yes
+  apt:
+    name: "{{ packagesdep }}"
+    state: latest

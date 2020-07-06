@@ -1,0 +1,4 @@
+dependencies:
+  - role: snap-install-classic
+    vars:
+      package_name: intellij-idea-ultimate

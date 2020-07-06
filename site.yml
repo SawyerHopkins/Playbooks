@@ -1,0 +1,6 @@
+---
+- import_playbook: init.playbook.yml
+- import_playbook: virtualization.playbook.yml
+- import_playbook: source-control.playbook.yml
+- import_playbook: cloud-providers.playbook.yml
+- import_playbook: editors.playbook.yml

@@ -1,0 +1,9 @@
+- name: Add APT Key
+  apt_key:
+    url: "{{ key_url }}"
+    state: present
+- name: Add APT Repository
+  apt_repository:
+    repo: "{{ repo_statement }}"
+    state: present
+    filename: "{{ repo_list_name | default(ansible) }}.list"

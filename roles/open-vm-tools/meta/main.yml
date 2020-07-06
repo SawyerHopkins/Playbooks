@@ -1,0 +1,6 @@
+dependencies:
+  - role: apt-install
+    vars:
+      packagesdep:
+        - open-vm-tools
+        - open-vm-tools-desktop
