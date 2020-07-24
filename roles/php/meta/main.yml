@@ -1,0 +1,7 @@
+dependencies:
+    - role: apt-install
+      vars:
+        packagesdep:
+          - php
+          - php-xdebug
+  

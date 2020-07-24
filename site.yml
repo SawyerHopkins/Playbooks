@@ -4,3 +4,4 @@
 - import_playbook: source-control.playbook.yml
 - import_playbook: cloud-providers.playbook.yml
 - import_playbook: editors.playbook.yml
+- import_playbook: languages.playbook.yml

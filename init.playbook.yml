@@ -4,4 +4,10 @@
     - role: apt-install
       vars:
         packagesdep:
-          - awscli
+          - htop
+          - curl
+          - gnupg
+          - gnupg-agent
+          - ca-certificates
+          - apt-transport-http
+          - software-properties-common
