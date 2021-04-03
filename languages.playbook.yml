@@ -1,0 +1,7 @@
+---
+# Install programming languages
+
+- hosts: all
+  roles:
+    - role: node-js
+    - role: python

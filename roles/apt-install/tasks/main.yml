@@ -1,0 +1,15 @@
+---
+# Role to install package using apt package manager.
+
+- name: Update APT Package Index
+  become: true
+  apt:
+    name: "*"
+    state: latest
+    update_cache: true
+    force_apt_get: true
+- name: Install packages with APT
+  become: true
+  apt:
+    name: "{{ package_list }}"
+    state: latest

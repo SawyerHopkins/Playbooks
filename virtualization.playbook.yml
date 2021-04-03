@@ -1,0 +1,8 @@
+---
+# Install tools for working with virtualization
+
+- hosts: all
+  roles:
+    - role: open-vm-tools
+    - role: docker
+    - role: kubernetes

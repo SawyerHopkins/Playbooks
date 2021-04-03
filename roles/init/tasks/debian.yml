@@ -1,0 +1,16 @@
+---
+
+- name: Install Common Packages
+  include_role:
+    name: apt-install
+  vars:
+    package_list:
+      - jq
+      - htop
+      - curl
+      - gnupg
+      - lsb-release
+      - gnupg-agent
+      - ca-certificates
+      - apt-transport-https
+      - software-properties-common

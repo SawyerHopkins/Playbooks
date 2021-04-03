@@ -1,0 +1,7 @@
+---
+# Role to install git version control
+
+- include: debian.yml
+  when: ansible_distribution == 'Debian'
+  tags:
+    - shell

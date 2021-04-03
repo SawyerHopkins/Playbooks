@@ -1,0 +1,8 @@
+---
+
+- name: Install Git
+  include_role:
+    name: apt-install
+  vars:
+    package_list:
+      - git

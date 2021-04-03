@@ -1,0 +1,6 @@
+---
+# Install editors
+
+- hosts: all
+  roles:
+    - role: vs-code

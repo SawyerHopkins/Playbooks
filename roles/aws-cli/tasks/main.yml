@@ -1,0 +1,8 @@
+---
+# Role to install aws command line
+
+- include: debian.yml
+  when: ansible_distribution == 'Debian'
+  tags:
+    - aws
+    - cloud-cli

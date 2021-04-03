@@ -1,0 +1,17 @@
+---
+
+- name: Install NVM
+  shell: "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash"
+  args:
+    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+    warn: false
+
+- name: Set NodeJS Version
+  set_fact:
+    target_nodejs_version: "{{ target_nodejs_version | default('14.16.0') }}"
+
+- name: Install NodeJS
+  shell: bash -ic "nvm install {{ target_nodejs_version | quote }}"
+
+- name: Set Default NodeJS Version
+  shell: bash -ic "nvm alias default {{ target_nodejs_version | quote }}"

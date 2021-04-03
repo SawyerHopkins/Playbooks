@@ -1,0 +1,7 @@
+---
+# Install tools for working with cloud providers
+
+- hosts: all
+  roles:
+    - role: aws-cli
+    - role: azure-cli

@@ -1,0 +1,18 @@
+---
+
+- name: Register VS-Code Apt Repository
+  include_role:
+    name: apt-register
+  vars:
+    key_url: https://packages.microsoft.com/keys/microsoft.asc
+    repo_os: deb
+    repo_url: https://packages.microsoft.com/repos/vscode
+    repo_branch: stable main
+    repo_list_name: vscode
+
+- name: Install VS-Code
+  include_role:
+    name: apt-install
+  vars:
+    package_list:
+      - code

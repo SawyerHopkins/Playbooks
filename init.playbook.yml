@@ -1,0 +1,7 @@
+---
+# Install common utilities
+
+- hosts: all
+  roles:
+    - role: init
+    - role: shell-setup

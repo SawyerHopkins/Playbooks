@@ -1,0 +1,21 @@
+---
+
+- name: Register Docker Apt Repository
+  include_role:
+    name: apt-register
+  vars:
+    key_url: https://download.docker.com/linux/debian/gpg
+    repo_os: deb
+    repo_url: https://download.docker.com/linux/debian
+    repo_branch: "{{ ansible_distribution_release }} stable"
+    repo_list_name: docker
+
+- name: Install Docker
+  include_role:
+    name: apt-install
+  vars:
+    package_list:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-compose

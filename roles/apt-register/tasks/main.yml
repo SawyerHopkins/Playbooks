@@ -1,0 +1,14 @@
+---
+# Role to add new repository to APT package manager source list.
+
+- name: Add APT Key
+  become: true
+  apt_key:
+    url: "{{ key_url }}"
+    state: present
+- name: Add APT Repository
+  become: true
+  apt_repository:
+    repo: "{{ repo_os }} [arch={{ repo_arch | default('amd64') }}] {{ repo_url }} {{ repo_branch }}"
+    state: present
+    filename: "{{ repo_list_name | default('ansible') }}.list"

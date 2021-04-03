@@ -1,0 +1,6 @@
+---
+# Install tools for working with source control
+
+- hosts: all
+  roles:
+    - role: git

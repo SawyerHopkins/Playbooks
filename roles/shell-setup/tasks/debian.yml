@@ -1,0 +1,13 @@
+---
+
+- name: Fix Poor Decisions About How LightDM Works
+  blockinfile:
+    dest: "{{ ansible_env.HOME }}/.xsessionrc"
+    block: |
+      # include .profile if it exists
+      if [ -f "$HOME/.profile" ]; then
+        . "$HOME/.profile"
+      fi
+    marker: '# {mark} ANSIBLE MANAGED BLOCK - lightdm-fix'
+    insertbefore: BOF
+    create: true
