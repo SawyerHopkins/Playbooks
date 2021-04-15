@@ -16,3 +16,15 @@
   vars:
     package_list:
       - code
+- name: Install Vetur Extension
+  command: "code --install-extension octref.vetur"
+- name: Install Spell Check Extension
+  command: "code --install-extension streetsidesoftware.code-spell-checker"
+- name: Install Docker Extension
+  command: "code --install-extension ms-azuretools.vscode-docker"
+- name: Install ESLint Extension
+  command: "code --install-extension dbaeumer.vscode-eslint"
+- name: Install ESLint Extension
+  command: "code --install-extension dbaeumer.vscode-eslint"
+- name: Install IntelliCode Extension
+  command: "code --install-extension visualstudioexptteam.vscodeintellicode"
