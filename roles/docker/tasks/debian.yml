@@ -19,3 +19,10 @@
       - docker-ce-cli
       - containerd.io
       - docker-compose
+
+- name: Add User "{{ ansible_user }}" To Docker Usergroup
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
+  become: yes
