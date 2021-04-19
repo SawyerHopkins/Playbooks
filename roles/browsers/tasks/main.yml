@@ -1,0 +1,7 @@
+---
+# Role to install browsers
+
+- include: debian.yml
+  when: ansible_distribution == 'Debian'
+  tags:
+    - browsers

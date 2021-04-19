@@ -7,3 +7,4 @@
 - import_playbook: cloud-cli.playbook.yml
 - import_playbook: editors.playbook.yml
 - import_playbook: languages.playbook.yml
+- import_playbook: browsers.playbook.yml

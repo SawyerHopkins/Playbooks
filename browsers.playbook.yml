@@ -1,0 +1,6 @@
+---
+# Install browsers
+
+- hosts: all
+  roles:
+    - role: browsers
