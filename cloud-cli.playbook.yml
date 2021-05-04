@@ -5,3 +5,4 @@
   roles:
     - role: aws-cli
     - role: azure-cli
+    - role: terraform
