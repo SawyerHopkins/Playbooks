@@ -4,3 +4,4 @@
 - hosts: all
   roles:
     - role: vs-code
+    - role: postgres

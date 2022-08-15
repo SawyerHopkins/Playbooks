@@ -1,0 +1,9 @@
+---
+# Role to install kubernetes command line
+
+- include: debian.yml
+  when: ansible_distribution == 'Debian'
+  tags:
+    - k8s
+    - kubernetes
+    - virtualization

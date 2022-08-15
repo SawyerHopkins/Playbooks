@@ -1,0 +1,28 @@
+---
+
+- name: Register Postgres Apt Repository
+  include_role:
+    name: apt-register
+  vars:
+    key_url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+    repo_os: deb
+    repo_url: http://apt.postgresql.org/pub/repos/apt/
+    repo_branch: "{{ ansible_distribution_release }}-pgdg main"
+    repo_list_name: postgres
+
+- name: Register PGAdmin Apt Repository
+  include_role:
+    name: apt-register
+  vars:
+    key_url: https://www.pgadmin.org/static/packages_pgadmin_org.pub
+    repo_os: deb
+    repo_url: https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/{{ ansible_distribution_release }}/
+    repo_branch: "pgadmin4 main"
+    repo_list_name: pgadmin4
+
+- name: Install Packages
+  include_role:
+    name: apt-install
+  vars:
+    package_list:
+      - pgadmin4
