@@ -1,0 +1,8 @@
+---
+
+- name: Install GoLang
+  include_role:
+    name: apt-install
+  vars:
+    package_list:
+      - golang
