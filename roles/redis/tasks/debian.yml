@@ -1,0 +1,8 @@
+---
+
+- name: Install Redis CLI
+  include_role:
+    name: apt-install
+  vars:
+    package_list:
+      - redis-tools

@@ -1,0 +1,8 @@
+---
+# Role to install node using node version manager.
+
+- include: debian.yml
+  when: ansible_distribution == 'Debian'
+  tags:
+    - editors
+    - redis
